@@ -22,6 +22,7 @@ fun RecipeExecutor.hiltViewModelFragment(
     // add required dependencies
     requireJavaVersion("1.8", true)
     addAllKotlinDependencies(moduleData)
+    //setBuildFeature("viewBinding", true)
     applyPlugin("kotlin-kapt")
     applyPlugin("dagger.hilt.android.plugin")
     addClasspathDependency("com.google.dagger:hilt-android-gradle-plugin:$hiltVersion")
