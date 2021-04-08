@@ -1,19 +1,21 @@
 <idea-plugin>
-    <id>org.jetbrains.plugins.template</id>
-    <name>Template</name>
-    <vendor>JetBrains</vendor>
+    <id>com.hai.ithust.template</id>
+    <name>CodeLab Android Templates</name>
+    <vendor email="hai.ithust@gmail.com" url="https://codesoeasy.weebly.com/">Golden Rice Media
+    </vendor>
+
+    <description><![CDATA[
+    Android Studio templates used by the Merchant Android team for code and architectural consistency
+    ]]></description>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="org.jetbrains.plugins.template.services.MyApplicationService"/>
-        <projectService serviceImplementation="org.jetbrains.plugins.template.services.MyProjectService"/>
+    <extensions defaultExtensionNs="com.android">
+        <tools.idea.wizard.template.wizardTemplateProvider
+            implementation="com.hai.ithust.template.CustomWizardTemplateProvider" />
     </extensions>
-
-    <applicationListeners>
-        <listener class="org.jetbrains.plugins.template.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
