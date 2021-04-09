@@ -43,7 +43,7 @@ object HiltViewModelFragmentTemplate : Template {
 
     override val recipe: Recipe
         get() = { data ->
-
+            TODO()
         }
 
     override val revision: Int
