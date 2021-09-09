@@ -1,8 +1,6 @@
 package com.hai.ithust.template.fragment
 
 import com.android.tools.idea.wizard.template.*
-import com.android.tools.idea.wizard.template.impl.defaultPackageNameParameter
-import java.io.File
 
 object HiltViewModelFragmentTemplate : Template {
     private val screenName = stringParameter {
@@ -26,9 +24,6 @@ object HiltViewModelFragmentTemplate : Template {
 
     override val description: String
         get() = "Hilt ViewModel CodeLab"
-
-    override val documentationUrl: String?
-        get() = null
 
     override val formFactor: FormFactor
         get() = FormFactor.Mobile
@@ -64,6 +59,6 @@ object HiltViewModelFragmentTemplate : Template {
         )
 
     override fun thumb(): Thumb {
-        return Thumb { findResource(this.javaClass, File("thumbs/screen.png")) }
+        return Thumb.NoThumb
     }
 }
