@@ -1,11 +1,11 @@
 <idea-plugin>
     <id>com.hai.ithust.template</id>
-    <name>CodeLab Android Templates</name>
+    <name>Android Templates</name>
     <vendor email="hai.ithust@gmail.com" url="https://codesoeasy.weebly.com/">Golden Rice Media
     </vendor>
 
     <description><![CDATA[
-    Android Studio templates used by the Merchant Android team for code and architectural consistency
+    Android Studio templates used by the Android team for code and architectural consistency
     ]]></description>
 
     <!-- Product and plugin compatibility requirements -->

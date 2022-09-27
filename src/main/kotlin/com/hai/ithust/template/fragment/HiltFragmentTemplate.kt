@@ -1,6 +1,8 @@
 package com.hai.ithust.template.fragment
 
 import com.android.tools.idea.wizard.template.*
+import org.jetbrains.kotlin.lombok.utils.capitalize
+import java.io.File
 
 object HiltViewModelFragmentTemplate : Template {
     private val screenName = stringParameter {
@@ -23,31 +25,27 @@ object HiltViewModelFragmentTemplate : Template {
         get() = listOf(TemplateConstraint.AndroidX, TemplateConstraint.Kotlin)
 
     override val description: String
-        get() = "Hilt ViewModel CodeLab"
+        get() = "Hilt Fragment View Model and View Binding"
+    override val documentationUrl: String
+        get() = ""
 
     override val formFactor: FormFactor
         get() = FormFactor.Mobile
-
-    override val minCompileSdk: Int
-        get() = 21
 
     override val minSdk: Int
         get() = 21
 
     override val name: String
-        get() = "Hilt ViewModel CodeLab"
+        get() = "Fragment Hilt View Model"
 
     override val recipe: Recipe
         get() = {
             hiltViewModelFragment(
                 it as ModuleTemplateData,
                 screenName.value.capitalize(),
-                directoryName.value.toLowerCase()
+                directoryName.value.lowercase()
             )
         }
-
-    override val revision: Int
-        get() = 1
 
     override val uiContexts: Collection<WizardUiContext>
         get() = listOf(WizardUiContext.MenuEntry)
@@ -59,6 +57,6 @@ object HiltViewModelFragmentTemplate : Template {
         )
 
     override fun thumb(): Thumb {
-        return Thumb.NoThumb
+        return Thumb { findResource(this.javaClass, File("thumbs/screen.png")) }
     }
 }
