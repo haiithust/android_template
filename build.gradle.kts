@@ -36,7 +36,7 @@ intellij {
     pluginName.set(properties("pluginName"))
 //    version.set(properties("platformVersion"))
     type.set(properties("platformType"))
-    localPath.set("/Applications/Android Studio.app/Contents")
+    localPath.set("/home/jayce/Downloads/android-studio/")
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     plugins.set(properties("platformPlugins").split(',').map(String::trim).filter(String::isNotEmpty))
 
@@ -65,8 +65,8 @@ detekt {
 tasks {
     // Set the compatibility versions to 1.8
     withType<JavaCompile> {
-        sourceCompatibility = "1.8"
-        targetCompatibility = "1.8"
+        sourceCompatibility = "11"
+        targetCompatibility = "11"
     }
 
     buildSearchableOptions {
@@ -74,7 +74,7 @@ tasks {
     }
 
     withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = "1.8"
+        kotlinOptions.jvmTarget = "11"
     }
 
     withType<Detekt> {
