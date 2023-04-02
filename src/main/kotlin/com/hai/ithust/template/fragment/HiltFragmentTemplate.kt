@@ -18,6 +18,12 @@ object HiltViewModelFragmentTemplate : Template {
         constraints = listOf(Constraint.UNIQUE, Constraint.NONEMPTY, Constraint.PACKAGE)
     }
 
+    override val useGenericInstrumentedTests: Boolean
+        get() = false
+
+    override val useGenericLocalTests: Boolean
+        get() = false
+
     override val category: Category
         get() = Category.Fragment
 

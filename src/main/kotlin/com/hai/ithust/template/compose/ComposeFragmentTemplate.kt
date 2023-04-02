@@ -47,6 +47,12 @@ object ComposeFragmentTemplate : Template {
             )
         }
 
+    override val useGenericInstrumentedTests: Boolean
+        get() = false
+
+    override val useGenericLocalTests: Boolean
+        get() = false
+
     override val uiContexts: Collection<WizardUiContext>
         get() = listOf(WizardUiContext.MenuEntry)
 
